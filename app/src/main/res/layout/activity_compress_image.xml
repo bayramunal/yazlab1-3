@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+       <TextView
+           android:id="@+id/textName"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Fotoraf Adı"
+           android:layout_centerHorizontal="true"
+           android:textColor="#000"
+           android:textStyle="bold"
+           android:textSize="20sp"
+           android:layout_margin="10dp"
+           />
+
+       <TextView
+           android:id="@+id/txtOrjinalText"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Orjinal fotoğraf"
+           android:layout_marginTop="10dp"
+           android:layout_gravity="center_horizontal"
+           android:layout_below="@+id/textName"
+           android:layout_alignStart="@id/imgPanel"
+           />
+       <LinearLayout
+           android:id="@+id/imgPanel"
+           android:layout_width="251dp"
+           android:layout_height="251dp"
+           android:layout_centerHorizontal="true"
+           android:layout_below="@id/txtOrjinalText"
+           android:gravity="center"
+           android:background="#000"
+           android:orientation="vertical"
+           android:layout_marginTop="10dp"
+           >
+
+
+           <ImageView
+               android:id="@+id/orjinalImg"
+               android:layout_width="250dp"
+               android:layout_height="250dp"
+               android:layout_gravity="center"
+               android:background="#fff"
+
+               />
+       </LinearLayout>
+
+       <TextView
+           android:id="@+id/orjinalImgText"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Fotoğraf boyutu"
+           android:textColor="#000"
+           android:textStyle="italic"
+           android:layout_margin="10dp"
+           android:layout_below="@id/imgPanel"
+           android:layout_alignStart="@id/imgPanel"
+           />
+
+       <TextView
+           android:id="@+id/txtCompressedImage"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Sıkıştırılmış fotoğraf"
+           android:layout_marginTop="20dp"
+           android:layout_gravity="center_horizontal"
+           android:layout_below="@+id/orjinalImgText"
+           android:layout_alignStart="@+id/imgPanel"
+           />
+
+
+       <LinearLayout
+           android:id="@+id/imgPanel2"
+           android:layout_width="251dp"
+           android:layout_height="251dp"
+           android:layout_below="@id/txtCompressedImage"
+           android:layout_centerHorizontal="true"
+           android:gravity="center"
+           android:background="#000"
+           android:layout_marginTop="10dp"
+           android:orientation="vertical"
+           >
+
+           <ImageView
+               android:id="@+id/compressedImage"
+               android:layout_width="250dp"
+               android:layout_height="250dp"
+               android:layout_gravity="center"
+               android:background="#fff"
+               />
+
+       </LinearLayout>
+
+       <TextView
+           android:id="@+id/compressedImageText"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Fotoğraf boyutu"
+           android:textColor="#000"
+           android:textStyle="italic"
+           android:layout_margin="10dp"
+           android:layout_below="@id/imgPanel2"
+           android:layout_alignStart="@id/imgPanel2"
+           />
+
+
+
+   </RelativeLayout>
+
+</ScrollView>

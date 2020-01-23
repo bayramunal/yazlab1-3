@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/viewPanel"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_centerHorizontal="true"
+        android:background="#000"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginTop="50dp"
+        >
+
+        <ImageView
+            android:id="@+id/imgViewNesne"
+            android:layout_width="249dp"
+            android:layout_height="249dp"
+            android:layout_centerHorizontal="true"
+            android:elevation="20dp"
+            android:background="#fff"
+            android:layout_gravity="center"
+
+            />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/viewPanel"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="4dp"
+        android:text="sonraki"
+        android:textSize="9sp"
+        android:layout_alignBottom="@id/viewPanel"
+        android:layout_alignTop="@id/viewPanel"
+        >
+
+        <Button
+            android:id="@+id/btnSonraki"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text=" &gt; "
+            android:layout_marginLeft="10dp"
+            />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/viewPanel"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="4dp"
+        android:text="sonraki"
+        android:textSize="9sp"
+        android:layout_alignBottom="@id/viewPanel"
+        android:layout_alignTop="@id/viewPanel"
+        >
+
+        <Button
+            android:id="@+id/btnOnceki"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:text=" &lt; "
+            />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtTahminOrani"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tahmin Oranı : "
+        android:layout_below="@id/viewPanel"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:textColor="#000"
+        />
+
+
+    <TextView
+        android:id="@+id/fotografAdi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nesne Adı : "
+        android:layout_below="@id/viewPanel"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:textColor="#000"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        />
+
+</RelativeLayout>

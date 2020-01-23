@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <ProgressBar
+            android:id="@+id/imageProgressBar"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:indeterminate="true"
+            android:visibility="invisible"
+            tools:visibility="visible" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/imageProgressBar"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical">
+
+
+                <LinearLayout
+                    android:id="@+id/imagePanel"
+                    android:layout_width="300dp"
+                    android:layout_height="300dp"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:background="#000"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="20dp"
+                    android:elevation="20dp">
+
+                        <ImageView
+                            android:id="@+id/fotograf"
+                            android:layout_width="299dp"
+                            android:layout_height="299dp"
+                            android:layout_gravity="center"
+                            android:background="#fff"/>
+
+
+                </LinearLayout>
+
+
+
+                <TextView
+                    android:id="@+id/txtChoose"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fotoğraf seçiniz;"
+                    android:textStyle="italic"
+                    android:layout_below="@+id/imagePanel"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="#000"
+                    android:layout_marginBottom="10dp"
+                    />
+
+
+
+
+                <LinearLayout
+                    android:id="@+id/buttonPanel"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+                    android:orientation="horizontal"
+                    android:layout_below="@+id/txtChoose"
+                    android:layout_alignStart="@+id/imgViewNesne"
+                    android:layout_alignEnd="@+id/imgViewNesne"
+                    android:layout_centerHorizontal="true">
+
+                        <Button
+                            android:id="@+id/fotografCek"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignEnd="@+id/fotograf"
+                            android:layout_below="@+id/fotograf"
+                            android:text="Kamera"
+                            android:layout_weight="1"
+                            android:textAllCaps="false"
+                            />
+
+                        <Button
+                            android:id="@+id/fotografSec"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Galeri"
+                            android:layout_toLeftOf="@id/fotografCek"
+                            android:layout_weight="1"
+                            android:textAllCaps="false"
+                            />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutIslemSec"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/buttonPanel"
+                    android:layout_marginBottom="20dp"
+                    android:layout_alignStart="@+id/imgViewNesne"
+                    android:layout_alignEnd="@+id/imgViewNesne"
+                    android:layout_centerHorizontal="true"
+                    android:orientation="vertical"
+                    android:weightSum="2"
+                    android:visibility="visible"
+                    >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Yapmak istediğiniz işlemi seçiniz;"
+                            android:textColor="#000"
+                            android:textStyle="italic"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_gravity="center_horizontal"
+                            />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:weightSum="2">
+                                <Button
+                                    android:id="@+id/btnAnaliz"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAllCaps="false"
+                                    android:text="Analiz"
+                                    android:layout_weight="1"
+                                    android:enabled="false"
+                                    />
+
+
+                                <Button
+                                    android:id="@+id/btnSikistirma"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAllCaps="false"
+                                    android:text="Sıkıştır"
+                                    android:layout_weight="1"
+                                    android:enabled="false"
+                                    />
+                        </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/chooseActivity"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/layoutIslemSec"
+                    android:layout_marginBottom="20dp"
+                    android:layout_alignStart="@+id/imgViewNesne"
+                    android:layout_alignEnd="@+id/imgViewNesne"
+                    android:layout_centerHorizontal="true"
+                    android:orientation="vertical"
+                    android:weightSum="2"
+                    android:visibility="visible"
+                    >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:weightSum="2">
+                                <Button
+                                    android:id="@+id/analizAktivite"
+                                    android:layout_width="300dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignEnd="@+id/buttonPanel"
+                                    android:layout_below="@+id/layoutIslemSec"
+                                    android:text="Nesneler"
+                                    android:enabled="false"
+                                    android:textAllCaps="false"
+                                    android:layout_weight="1"
+                                    />
+
+                                <Button
+                                    android:id="@+id/sikistirmaAktivite"
+                                    android:layout_width="300dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignEnd="@+id/buttonPanel"
+                                    android:layout_below="@+id/layoutIslemSec"
+                                    android:text="Fotoğraflar"
+                                    android:enabled="false"
+                                    android:textAllCaps="false"
+                                    android:layout_weight="1"
+                                    />
+                        </LinearLayout>
+                </LinearLayout>
+
+
+
+
+        </RelativeLayout>
+</RelativeLayout>
+</ScrollView>
